@@ -28,15 +28,6 @@ else
     exit 1
 fi
 
-# Start PHP-FPM
-echo "⏳ Starting PHP-FPM..."
-if /usr/sbin/php-fpm8 --fpm-config /home/container/php-fpm/php-fpm.conf --daemonize; then
-    log_success "PHP-FPM started successfully."
-else
-    log_error "Failed to start PHP-FPM."
-    exit 1
-fi
-
 # NGINX if else WIP
 echo "⏳ Starting Nginx..."
 # Final message
